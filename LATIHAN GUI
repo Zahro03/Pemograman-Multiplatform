@@ -1,0 +1,129 @@
+import tkinter as tk
+
+def hasil_prediksi():
+    luaran_hasil.config(text="Hasil Prediksi: Teknologi Informasi")
+
+# Membuat jendela utama
+root = tk.Tk()
+root.title("Aplikasi Prediksi Prodi Pilihan")
+root.geometry("400x300")
+
+# Membuat label judul
+label_judul = tk.Label(root, text="Aplikasi Prediksi Prodi Pilihan", font=("Helvetica", 16))
+label_judul.pack(pady=10)
+
+# Membuat input nilai mata pelajaran
+label_matapelajaran = tk.Label(root, text="Input Nilai Mata Pelajaran")
+label_matapelajaran.pack()
+
+input_nilai = []
+for i in range(10):
+    label_mapel = tk.Label(root, text=f"Mata Pelajaran {i+1}:")
+    label_mapel.pack(anchor="w")
+    entry = tk.Entry(root)
+    entry.pack(pady=5)
+    input_nilai.append(entry)
+
+# Membuat button Hasil Prediksi
+button_hasil = tk.Button(root, text="Hasil Prediksi", command=hasil_prediksi)
+button_hasil.pack(pady=10)
+
+# Membuat label luaran hasil prediksi
+luaran_hasil = tk.Label(root, text="Hasil Prediksi:")
+luaran_hasil.pack()
+
+# Menjalankan aplikasi
+root.mainloop()
+
+
+
+
+
+import tkinter as tk
+top = tk.Tk()
+L1 = tk.Label(top, text="User Name")
+L1.pack(side=tk.LEFT)
+E1 = tk.Entry(top, bd=5)
+E1.pack(side=tk.RIGHT)
+top.mainloop()
+
+#Tkinter Programming
+import tkinter
+top = tkinter.Tk() 
+# Code to add widgets will go here... 
+top.mainloop() 
+
+#Python - Tkinter Button
+import tkinter.messagebox 
+top = tkinter.Tk() 
+
+def helloCallBack(): 
+    tkinter.messagebox.showinfo( "Hello Python", "Hello World") 
+
+B = tkinter.Button(top, text ="Hello", command = helloCallBack) 
+B.pack() 
+top.mainloop()
+
+#Python - Tkinter Canvas
+import tkinter as tk
+from tkinter import messagebox
+
+top = tk.Tk()
+top.title("Kelas B")
+top.resizable(False,False)
+top.geometry("500x500")
+
+C = tk.Canvas(top, bg="blue", height=250, width=300)
+coord = 10, 50, 240, 210
+arc = C.create_arc(coord, start=0, extent=150, fill="black")
+C.pack(pady=15)
+
+checkVar1 = tk.IntVar()
+checkVar2 = tk.IntVar()
+
+checkButton1= tk.Checkbutton(top,text="Music",variable=checkVar1,height=5,width=10)
+checkButton2 = tk.Checkbutton(top,text="Video",variable=checkVar2,height=5,width=10)
+
+checkButton1.pack()
+checkButton2.pack()
+
+top.mainloop()
+
+#Bikin label 
+L1 = tk.Label(top,text="User Name")
+L1.grid(row=0,column=0)
+
+#Input Data
+E1 = tk.Entry(top,bd=5)
+E1.grid(row=0,column=1)
+
+top.mainloop()
+
+
+import tkinter as tk
+
+root = tk.Tk()
+root.geometry("200x200")
+root.resizable(False,False)
+
+#frame 1
+frame =tk.Frame (root, pady=20, padx=20)
+frame.pack()
+
+#frame 2
+bottonframe = tk.Frame(root)
+bottonframe.pack(side=tk.BOTTOM)
+
+redbutton = tk.Button(frame,text="Red",fg="red")
+redbutton.pack(side=tk.LEFT)
+
+greenbutton = tk.Button(frame,text="Brown",fg="brown")
+greenbutton.pack(side=tk.LEFT)
+
+bluebutton = tk.Button(frame,text="Blue"fg="blue")
+bluebutton.pack(side=tk.BOTTOM)
+
+blackbutton = tk.Button(bottomframe,text="Black"fg="black")
+blackbutton.pack(side=tk.BOTTOM)
+
+root.mainloop()
